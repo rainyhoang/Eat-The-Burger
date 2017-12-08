@@ -1,14 +1,9 @@
-DROP DATABASE IF EXISTS burger_db;
-CREATE DATABASE burger_db;
-USE burger_db;
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
--- Create the table plans.
-CREATE TABLE burger
-(
-id int NOT NULL AUTO_INCREMENT,
-burger_name varchar(30) NOT NULL,
-devour boolean not null default 0,
-date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-PRIMARY KEY (id)
-);
-
+CREATE TABLE burgers(
+id int AUTO_INCREMENT,
+PRIMARY KEY (id),
+burger_name varchar(50) NOT NULL,
+devoured BOOLEAN default false,
+date TIMESTAMP);

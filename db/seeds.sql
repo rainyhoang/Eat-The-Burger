@@ -1,5 +1,5 @@
-
-
-INSERT INTO burger (burger_name) VALUES ('Mice Meet Burger');
-INSERT INTO burger (burger_name) VALUES ('Frog Burger');
-INSERT INTO burger (burger_name) VALUES ('bug Burger');
+INSERT INTO burgers(burger_name) VALUES ('Jersey Burger');
+INSERT INTO burgers(burger_name) VALUES ('Buffalo Chicken Burger');
+INSERT INTO burgers(burger_name) VALUES ('Veggie Burger');
+INSERT INTO burgers(burger_name) VALUES ('Bacon Cheeseburger');
+INSERT INTO burgers(burger_name) VALUES ('Plain Old Hamburger');
