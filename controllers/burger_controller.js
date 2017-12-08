@@ -1,10 +1,14 @@
 var express = require ('express')
 var router = express.Router();
 var burger = require('../model/burger.js');
+
+
 //======================GET BURGER DATA======================
 router.get('/', function(req, res){
+  console.log('hello')
   //create an object that hold infromation from burger table
   burger.selectAll(function(data){
+    console.log('here')
     var newBurger = {burger: data};
     res.render("index", newBurger);
   });

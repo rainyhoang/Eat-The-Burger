@@ -3,21 +3,21 @@ var orm = require('../config/orm.js');
 var burger = {
   selectAll: function(callback){
     orm.selectAll ("burger", function(res) {
-      cb(res);
+      callback(res);
     });
   },
 
   insertOne: function(cols, vals, cb){
     orm.insertOne('burger', cols, vals, function(res){
-      cb(res);
+      callback(res);
     });
   },
 
   updateOne: function (objColVals, condition, cb) {
     orm.updateOne('burger', objColVals, condition, function(res){
-      cb(res);
+      callback(res);
     });
   }
 
 }//variable
-module.export = burger
+module.exports = burger

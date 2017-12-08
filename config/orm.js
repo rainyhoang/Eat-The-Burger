@@ -30,16 +30,18 @@ var orm =
 
 //========================SELECT ALL======================
   selectAll: function(tableInput, callback){
-    var queryString = 'SELECT * FROM' + tableInput + ";";
+    console.log('yoyoyoy')
+    var queryString = 'SELECT * FROM ' + tableInput + ";"
+    console.log(queryString)
     connection.query(queryString, function(err, result){
-      if (err) {throw err;}
-      console.log(result)
+    //  if (err) {throw err;}
+      console.log(err)
       callback (result);
     });
   },
 
 //========================Insert Burger======================
-  insertOne: function(table, cols, val, callback) {
+  insertOne: function(table, cols, vals, callback) {
     var queryString = "INSERT INTO" + table;
 
     queryString += " (";
@@ -49,7 +51,7 @@ var orm =
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
     console.log (querryString)
-    connection.query(queryString, function(err, result){
+    connection.query(queryString, vals, function(err, result){
       if (err) {throw err;}
       callback (result);
     });
@@ -69,5 +71,5 @@ var orm =
   }
 
 };//variable
-module.export = orm
+module.exports = orm
 //========================end ORM======================
