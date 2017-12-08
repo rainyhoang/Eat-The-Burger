@@ -1,0 +1,38 @@
+<h1>BURGER TIME!!!!</h1>
+
+<h2>throw it all!!!!!!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#unless devour}}
+      {{> burger/cat-block sleep=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>burger that are devour!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if devour}}
+      {{> burger/cat-block sleep=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Order Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="slee">devour?</label><br>
+    <input type="radio" name="devour" value="1" checked> devour!<br>
+    <input type="radio" name="devour" value="0"> Awake
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
